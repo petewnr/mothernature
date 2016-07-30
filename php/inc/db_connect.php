@@ -8,7 +8,7 @@ $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 try 
 {
     $testresult = $db->query("SELECT * FROM wastedata");
-    echo "Connected to db";
+    //echo "Connected to db";
 } 
 catch(PDOException $ex) 
 {
