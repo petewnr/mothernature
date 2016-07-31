@@ -10,6 +10,19 @@ $xml = simplexml_load_file($url);
 //    echo $station->measurement. ", ";  
 //} 
 
-echo $xml->category->region->station[6]->measurement[0];
+$reading = $xml->category->region[1]->station[1]->measurement[2];
+
+if ($reading < 15)
+{
+	echo "g";
+}
+else if ($reading > 29)
+{
+	echo "b";
+}
+else
+{
+	echo "o";
+}
 	
 ?>
